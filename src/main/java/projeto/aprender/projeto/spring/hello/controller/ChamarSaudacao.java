@@ -14,7 +14,7 @@ public class ChamarSaudacao {
     private final AtomicLong contator = new AtomicLong();
 
     @RequestMapping("/saudacao")
-    public Saudacao saudacao(@RequestParam(value="nome", defaultValue = "World") String nome){
+    public Saudacao saudacao(@RequestParam(value="nome", defaultValue = "World!!!") String nome){
         return new Saudacao(contator.incrementAndGet(), String.format(template, nome));
     }
 
