@@ -10,11 +10,11 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class ChamarSaudacao {
 
-    private static final String template = "Hello...., %s!";
+    private static final String template = "Hello!!!...., %s!";
     private final AtomicLong contator = new AtomicLong();
 
     @RequestMapping("/saudacao")
-    public Saudacao saudacao(@RequestParam(value="nome", defaultValue = "World") String nome){
+    public Saudacao saudacao(@RequestParam(value="nome", defaultValue = "World!!!") String nome){
         return new Saudacao(contator.incrementAndGet(), String.format(template, nome));
     }
 
